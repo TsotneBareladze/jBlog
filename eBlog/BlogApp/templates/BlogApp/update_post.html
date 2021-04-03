@@ -6,6 +6,8 @@
 
   {% block content %}
 
+
+{% if user.is_authenticated %}
 <h1>Update Post...</h1>
 <br /><br />
 <div class="form-group">
@@ -15,5 +17,9 @@
         <button type="submit" class="btn btn-primary">Update</button>
     </form>
     </div>
+{% else %}
 
+You are not allowed Here!!!
+
+{% endif %}
   {% endblock %}
